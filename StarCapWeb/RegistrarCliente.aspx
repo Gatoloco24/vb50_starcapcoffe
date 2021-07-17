@@ -1,9 +1,14 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RegistrarCliente.aspx.cs" Inherits="StarCapWeb.RegistrarCliente" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="Contenido" runat="server">
+    <style type="text/css">
+        #Contenido_TipoRb1 label{
+            margin-left:10px;
+        }
+    </style>
     <div class="row">
         <div class="col-12 col-md-6 col-lg-4 mx-auto mt-5">
             <div class="card">
-                <div class="card-header bg-success text-dark">
+                <div class="card-header bg-success text-dark text-center">
                     <h5>Registro de Clientes</h5>
                 </div>
                 <div class="card-body">
@@ -22,15 +27,15 @@
                     </div>
                     <div class="mb-3">
                         <label class="fomr-label" for="TipoRb1">Tipo de cliente</label>
-                        <asp:RadioButton ID="TipoRb1" runat="server">
-                            <asp:ListItem Value="1" Selected="true" text="Oro"></asp:ListItem>
-                            <asp:ListItem Value="2" text="Platino"></asp:ListItem>
-                            <asp:ListItem Value="3" text="Bronce"></asp:ListItem>
-                        </asp:RadioButton>
+                        <asp:RadioButtonList ID="TipoRb1" runat="server">
+                            <asp:ListItem Value="1" Selected="True" Text="Oro"></asp:ListItem>
+                            <asp:ListItem Value="2" Text="Platino"></asp:ListItem>
+                            <asp:ListItem Value="3" Text="Bronce"></asp:ListItem>
+                        </asp:RadioButtonList>
                     </div>
                 </div>
-                <div class="card-footer">
-
+                <div class="card-footer d-grid gap-1">
+                    <asp:Button ID="GuardarBtn" runat="server" Text="Registrar" CssClass="btn btn-primary" />
                 </div>
             </div>
         </div>
